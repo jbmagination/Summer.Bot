@@ -17,11 +17,8 @@ client.on('message', message => {
   }
   else if (message.content === '<@588772311931420672>') {
     message.channel.send(new Discord.RichEmbed()
-                      .setTitle('Sunforest Ally')
-                      .setDescription('Summer Bot')
                       .setColor('#29752f')
-                      .addField('Hi! I am a small helper for the Sunforest Ally.')
-                      .addBlankField()
+                      .addField('Hi! I\'m a small helper for this server.','If you\'d to know more, DM <@381862688298631168>')
                       .setTimestamp()
                       .setFooter('v0.2')
 );
