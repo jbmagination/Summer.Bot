@@ -40,9 +40,9 @@ message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
                       .addField('Drumroll...','I have no commands yet besides this one. That\'s right! NONE!')
                       .setTimestamp()
-                      .setFooter(version)
-);
+ .setFooter(version + ' | Hi! I\'m a small helper for this server. If you\'d to know more, DM <@381862688298631168>')
   }
+);
 });    
 
 client.login(process.env.BOT_TOKEN);
