@@ -38,10 +38,20 @@ message.channel.send(new Discord.RichEmbed()
   else if (message.content === 's!help') {
           message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
-                      .addField('Drumroll...','I have no commands yet besides this one. That\'s right! NONE!')
+                      .addField('s!help','Opens help/commands menu')
+                      .addField('s!ping','Tests to see if bot is working')
                       .setTimestamp()
  .setFooter(version + ' | Hi! I\'m a small helper for this server.')
 )}
+else if (message.content === 's!ping') {
+    message.channel.send(new Discord.RichEmbed()
+  .setColor('#29752f')
+  .addField('Pong!',new Date().getTime() - message.createdTimestamp + " ms")
+  .setTimestamp()
+  .setFooter(version + ' | Hi! I\'m a small helper for this server.')
+)
+)
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
