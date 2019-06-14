@@ -50,7 +50,6 @@ else if (message.content === 's!ping') {
   .setTimestamp()
   .setFooter(version + ' | Hi! I\'m a small helper for this server.')
 )
-)
   }
 });
 
