@@ -15,6 +15,17 @@ client.on('message', message => {
   else if (message.content.startsWith("=")) {
     message.reply('this server does not have Ayana! Please use Rythm instead!');
   }
+  else if (message.content === '<@588772311931420672>') {
+    message.channel.send(new Discord.RichEmbed()
+                      .setTitle('Sunforest Ally')
+                      .setDescription('Summer Bot')
+                      .setColor('#29752f')
+                      .addField('Hi! I am a small helper for the Sunforest Ally.')
+                      .addBlankField()
+                      .setTimestamp()
+                      .setFooter('v0.2')
+);
+  }
 });    
 
 client.login(process.env.BOT_TOKEN);
