@@ -10,7 +10,7 @@ client.on('message', message => {
   if (message.content.startsWith("r!")) {
 message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
-                      .addField('This server does not have Dyno!','Please use RoboTop or Rythm!')
+                      .addField('This server does not use `r!` for it\'s RoboTop prefix!','Please use `0` instead!')
                       .setTimestamp()
                       .setFooter(version + ' | Hi! I\'m a small helper for this server. If you\'d to know more, DM <@381862688298631168>')
   }
@@ -43,6 +43,6 @@ message.channel.send(new Discord.RichEmbed()
  .setFooter(version + ' | Hi! I\'m a small helper for this server. If you\'d to know more, DM <@381862688298631168>')
   }
 );
-});    
+});
 
 client.login(process.env.BOT_TOKEN);
