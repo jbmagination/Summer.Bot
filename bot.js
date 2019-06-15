@@ -8,6 +8,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  if(!message.author.user.bot) return;
   if (message.content.startsWith("r!")) {
 message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
