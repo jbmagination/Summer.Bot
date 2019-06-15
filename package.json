@@ -1,19 +1,21 @@
 {
-  "name": "tree",
-  "description": "tree",
+  "name": "Summer.Bot",
+  "description": "SummerSunflower's Discord server's bot",
   "version": "1.0.0",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "11.4.0",
-    "node-opus": "^0.3.1",
-    "ffmpeg-binaries": "^4.0.0",
-    "bufferutil": "^4.0.1",
-    "sodium": "^3.0.2",
-    "libsodium-wrappers": "^0.7.4",
     "@discordjs/uws": "^11.149.1",
-    "es-check": "^5.0.0"
+    "bufferutil": "^4.0.1",
+    "discord.js": "^11.5.1",
+    "es-check": "^5.0.0",
+    "ffmpeg-binaries": "^4.0.0",
+    "fs": "0.0.1-security",
+    "libsodium-wrappers": "^0.7.4",
+    "node-opus": "^0.3.2",
+    "opusscript": "0.0.6",
+    "sodium": "^3.0.2"
   }
 }
