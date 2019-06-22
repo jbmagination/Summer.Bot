@@ -6,9 +6,6 @@ var footer = version + ' | ' + catchphrase
 const fs = require("fs");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-let messageArray = message.conent.split(" ")
-let cmd = messageArray[0];
-let args = messageArray.slice(1);
 let prefix = 's!'
 let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice((prefix.length))))
 let guild = client.guilds.get('572499797991227403'), USER_ID = '551922470823657502';
@@ -34,6 +31,9 @@ client.on('ready', async () => {
 });
 
 client.on('message', async message => {
+  let messageArray = message.conent.split(" ")
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
   if(message.author.bot) return;
   if(message.channel.type === "dm") {
     if (guild.member(USER_ID)) {
