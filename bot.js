@@ -36,13 +36,6 @@ client.on('message', async message => {
   let commandfile = client.commands.get(cmd.slice(prefix.length)) || client.commands.get(client.aliases.get(cmd.slice((prefix.length))))
   if(message.author.bot) return;
   if(message.channel.type === "dm") {
-    if (guild.member(USER_ID)) {
-      message.channel.send(new Discord.RichEmbed()
-      .setColor('#29752f')
-      .addField('**You can\'t use this bot in DM\'s!**','**Head back to Sunforest Ally and use commands there!**')
-      .setTimestamp()
-      .setFooter(footer)
-)} else
     message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
     .addField('You can\'t use this bot in DM\'s!','Head back to Sunforest Ally and use commands there!')
