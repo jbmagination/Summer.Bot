@@ -1,45 +1,13 @@
 const Discord = require('discord.js');
-const client = new Discord.Client({disableEveryone: true});
+const client = new Discord.Client();
 var version = '0.6'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
-const fs = require("fs");
-client.commands = new Discord.Collection();
-client.aliases = new Discord.Collection();
-let messageArray = message.conent.split(" ")
-let cmd = messageArray[0];
-let args = messageArray.slice(1);
-let prefix = 's!'
-let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice((prefix.length)))
-// fs.readdir("./commands/", (err, files) => {
-//  if(err) console.log(err);
-//  let jsfile = files.filter(f => f.split(".").pop === "js")
-//  if(jsfile.length <= 0) {
-//    return console.log("Couldn't find commands");
-//  }
-
-//  jsfile.forEach((f, i) => {
-//    let pull = require(`./commands/${f}`);
-//    client.commands.set(pull.config.name, pull);
-//    pull.config.aliases.forEach(alias => {
-//      client.aliases.set(alias, pull.config.name)
-//    });
-//  });
-//});
-client.on('ready', async () => {
+client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Harro! | s!help", {type: "STREAMING"});
 });
 
-client.on('message', async message => {
-  if(message.author.bot) return;
-  if(message.channel.type === "dm") {
-    message.channel.send(new Discord.RichEmbed()
-    .setColor('#29752f')
-    .addField('You can\'t use this bot in DM\'s!','Head back to Sunforest Ally and use commands there!')
-    .setTimestamp()
-    .setFooter(footer)
-  }
+client.on('message', message => {
   if (message.content.startsWith("r!")) {
 message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
@@ -75,8 +43,8 @@ message.channel.send(new Discord.RichEmbed()
                         .addField('s!help','Opens help/commands menu')
                         .addField('s!ping','Tests to see if bot is working')
                         .setTimestamp()
-                        .setFooter(footer)
-                      )}
+   .setFooter(footer)
+  )}
   else if (message.content === 's!ping') {
       message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
