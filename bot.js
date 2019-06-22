@@ -28,7 +28,7 @@ let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get
 //});
 client.on('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Harro! | s!help", {type: "STREAMING", url: "https://www.twitch.tv/summersunflower"});
+  client.user.setActivity("Harro! | s!help", {type: "STREAMING"});
 });
 
 client.on('message', async message => {
