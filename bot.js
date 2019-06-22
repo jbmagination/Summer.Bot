@@ -71,8 +71,7 @@ message.channel.send(new Discord.RichEmbed()
                         .addField('**This server does not have Dyno!**','**Please use RoboTop or Rythm!**')
                         .setTimestamp()
                         .setFooter(footer)
-    )}
-  } else
+    )} else
     message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
                       .addField('This server does not have Dyno!','Please use RoboTop or Rythm!')
