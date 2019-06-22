@@ -117,6 +117,7 @@ message.channel.send(new Discord.RichEmbed()
 
     if (message.content === 's!help') {
       if (guild.member(USER_ID)) {
+        message.channel.send(new Discord.RichEmbed()
         .setColor('#29752f')
         .addField('**s!help**','**Opens help/commands menu**')
         .addField('**s!ping**','**Tests to see if bot is working**')
