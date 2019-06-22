@@ -48,7 +48,7 @@ client.on('message', async message => {
     .addField('You can\'t use this bot in DM\'s!','Head back to Sunforest Ally and use commands there!')
     .setTimestamp()
     .setFooter(footer)
-  }
+  )}
   else if (message.content.startsWith("r!")) {
     if (guild.member(USER_ID)) {
       message.channel.send(new Discord.RichEmbed()
