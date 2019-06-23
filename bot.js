@@ -88,7 +88,7 @@ message.channel.send(new Discord.RichEmbed()
         .addField('**s!convert**','**Converts regular text to bold, and vice versa.**')
         .setTimestamp()
 .setFooter(footer)
-      )} else
+      )}
   else if (message.content === 's!ping') {
     message.channel.send(new Discord.RichEmbed()
   .setColor('#29752f')
