@@ -137,7 +137,24 @@ message.channel.send(new Discord.RichEmbed()
     .addField('Pong!',new Date().getTime() - message.createdTimestamp + " ms")
     .setTimestamp()
     .setFooter(footer)
-  )} else if (guild.member(USER_ID)) {
+  )} else if (message.content === 's!convert') {
+      if (text.startsWith('**')) {
+        message.channel.send(text)
+      } else message.channel.send('**' + text + '**')
+  }  else if (message.content === 's!pong') {
+      if (guild.member(USER_ID)) {
+        message.channel.send(new Discord.RichEmbed()
+      .setColor('#29752f')
+      .addField('**Uhh... ping!**',"**" + new Date().getTime() - message.createdTimestamp + " ms**")
+      .setTimestamp()
+      .setFooter(footer)
+      )} else
+        message.channel.send(new Discord.RichEmbed()
+      .setColor('#29752f')
+      .addField('Uhh... ping!','404 ms')
+      .setTimestamp()
+      .setFooter(footer)
+    )} else if (guild.member(USER_ID)) {
       message.channel.send(new Discord.RichEmbed()
       .setColor('#29752f')
       .addField('**Sorry, I don\'t recognize that command!**','**Type `s!help` for a list of commands.**')
