@@ -105,12 +105,12 @@ message.channel.send(new Discord.RichEmbed()
       .addField('**Uhh... ping!**','**404 ms**')
       .setTimestamp()
       .setFooter(footer)
-    )} else
+    )} else {
       message.channel.send(new Discord.RichEmbed()
       .setColor('#29752f')
       .addField('**Sorry, I don\'t recognize that command!**','**Type `s!help` for a list of commands.**')
       .setTimestamp()
       .setFooter(footer)
-            });
+    )});
 
 client.login(process.env.BOT_TOKEN);
