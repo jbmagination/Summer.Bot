@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
 var version = '0.6'
-var catchphrase = 'Harro! s!help'
+var catchphrase = '**Harro! s!help**'
 var footer = version + ' | ' + catchphrase
 const fs = require("fs");
 client.commands = new Discord.Collection();
@@ -38,66 +38,37 @@ client.on('message', async message => {
   if(message.channel.type === "dm") {
     message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
-    .addField('You can\'t use this bot in DM\'s!','Head back to Sunforest Ally and use commands there!')
+    .addField('**You can\'t use this bot in DM\'s!**','**Head back to Sunforest Ally and use commands there!**')
     .setTimestamp()
     .setFooter(footer)
   )}
   else if (message.content.startsWith("r!")) {
-    if (client.guilds.get('572499797991227403').member('551922470823657502')) {
-      message.channel.send(new Discord.RichEmbed()
-                            .setColor('#29752f')
-                            .addField('**This server does not use `r!` for it\'s RoboTop prefix!**','**Please use `0` instead!**')
-                            .setTimestamp()
-                            .setFooter(footer)
-        )}
-    else
 message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
-                      .addField('This server does not use `r!` for it\'s RoboTop prefix!','Please use `0` instead!')
+                      .addField('**This server does not use `r!` for it\'s RoboTop prefix!**','**Please use `0` instead!**')
                       .setTimestamp()
                       .setFooter(footer)
   )}
   else if (message.content.startsWith("?")) {
-    if (user) {
       message.channel.send(new Discord.RichEmbed()
                         .setColor('#29752f')
                         .addField('**This server does not have Dyno!**','**Please use RoboTop or Rythm!**')
                         .setTimestamp()
                         .setFooter(footer)
-    )} else
-    message.channel.send(new Discord.RichEmbed()
-                      .setColor('#29752f')
-                      .addField('This server does not have Dyno!','Please use RoboTop or Rythm!')
-                      .setTimestamp()
-                      .setFooter(footer)
   )}
   else if (message.content.startsWith("=")) {
-  if (user) {
     message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
                       .addField('**This server does not have Ayana!**','**Please use Rythm instead!**')
                       .setTimestamp()
                       .setFooter(footer)
-  )} else
-    message.channel.send(new Discord.RichEmbed()
-                      .setColor('#29752f')
-                      .addField('This server does not have Ayana!','Please use Rythm instead!')
-                      .setTimestamp()
-                      .setFooter(footer)
   )}
   else if (message.content.startsWith("<@588772311931420672>")) {
-    if (user) {
       message.channel.send(new Discord.RichEmbed()
                         .setColor('#29752f')
                         .addField('**Harro! I\'m a special helper for this server, the Sunforest Ally!**','**If you\'d to know more, DM <@381862688298631168> or use `s!help` for a list of commands.**')
                         .setTimestamp()
                         .setFooter(version)
-    )} else
-    message.channel.send(new Discord.RichEmbed()
-                      .setColor('#29752f')
-                      .addField('Harro! I\'m a special helper for this server, the Sunforest Ally!','If you\'d to know more, DM <@381862688298631168> or use `s!help` for a list of commands.')
-                      .setTimestamp()
-                      .setFooter(version)
  )}
  else if (message.content.startsWith("**<@588772311931420672>")) {
       message.channel.send(new Discord.RichEmbed()
@@ -109,63 +80,37 @@ message.channel.send(new Discord.RichEmbed()
     else if (message.content.startsWith("s!")) {
 
     if (message.content === 's!help') {
-      if (user) {
         message.channel.send(new Discord.RichEmbed()
         .setColor('#29752f')
         .addField('**s!help**','**Opens help/commands menu**')
         .addField('**s!ping**','**Tests to see if bot is working**')
+        .addField('**s!pong**','**Wait, this shouldn\'t be here!')
+        .addField('**s!convert**','**Converts regular text to bold, and vice versa.**')
         .setTimestamp()
 .setFooter(footer)
       )} else
-            message.channel.send(new Discord.RichEmbed()
-                        .setColor('#29752f')
-                        .addField('s!help','Opens help/commands menu')
-                        .addField('s!ping','Tests to see if bot is working')
-                        .setTimestamp()
-   .setFooter(footer)
-  )}
   else if (message.content === 's!ping') {
-    if (user) {
-      message.channel.send(new Discord.RichEmbed()
-    .setColor('#29752f')
-    .addField('**Pong!**','**' + new Date().getTime() - message.createdTimestamp + " ms**")
-    .setTimestamp()
-    .setFooter(footer)
-    )} else
-      message.channel.send(new Discord.RichEmbed()
-    .setColor('#29752f')
-    .addField('Pong!',new Date().getTime() - message.createdTimestamp + " ms")
-    .setTimestamp()
-    .setFooter(footer)
+    message.channel.send(new Discord.RichEmbed()
+  .setColor('#29752f')
+  .addField('**Pong!**',new Date().getTime() - message.createdTimestamp + " ms")
+  .setTimestamp()
+  .setFooter(footer)
   )} else if (message.content === 's!convert') {
       if (text.startsWith('**')) {
         message.channel.send(text)
       } else message.channel.send('**' + text + '**')
   }  else if (message.content === 's!pong') {
-      if (user) {
         message.channel.send(new Discord.RichEmbed()
       .setColor('#29752f')
-      .addField('**Uhh... ping!**',"**" + new Date().getTime() - message.createdTimestamp + " ms**")
+      .addField('**Uhh... ping!**','**404 ms**')
       .setTimestamp()
       .setFooter(footer)
-      )} else
-        message.channel.send(new Discord.RichEmbed()
-      .setColor('#29752f')
-      .addField('Uhh... ping!','404 ms')
-      .setTimestamp()
-      .setFooter(footer)
-    )} else if (user) {
+    )} else
       message.channel.send(new Discord.RichEmbed()
       .setColor('#29752f')
       .addField('**Sorry, I don\'t recognize that command!**','**Type `s!help` for a list of commands.**')
       .setTimestamp()
       .setFooter(footer)
-    )} else message.channel.send(new Discord.RichEmbed()
-                .setColor('#29752f')
-                .addField('Sorry, I don\'t recognize that command!','Type `s!help` for a list of commands.')
-                .setTimestamp()
-                .setFooter(footer)
-              )}
             });
 
 client.login(process.env.BOT_TOKEN);
