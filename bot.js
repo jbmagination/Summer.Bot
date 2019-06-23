@@ -7,7 +7,6 @@ const fs = require("fs");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 let prefix = 's!'
-let guild = client.guilds.get('572499797991227403'), USER_ID = '551922470823657502';
 // fs.readdir("./commands/", (err, files) => {
 //  if(err) console.log(err);
 //  let jsfile = files.filter(f => f.split(".").pop === "js")
@@ -34,6 +33,8 @@ client.on('message', async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   let commandfile = client.commands.get(cmd.slice(prefix.length)) || client.commands.get(client.aliases.get(cmd.slice((prefix.length))))
+  let guild = client.guilds.get('572499797991227403'),
+    USER_ID = '551922470823657502';
   if(message.author.bot) return;
   if(message.channel.type === "dm") {
     message.channel.send(new Discord.RichEmbed()
