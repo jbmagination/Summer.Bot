@@ -33,8 +33,7 @@ client.on('message', async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   let commandfile = client.commands.get(cmd.slice(prefix.length)) || client.commands.get(client.aliases.get(cmd.slice((prefix.length))))
-  let guild = client.guilds.get('572499797991227403'),
-    USER_ID = '551922470823657502';
+  let user = client.guilds.get('572499797991227403').member('551922470823657502')
   if(message.author.bot) return;
   if(message.channel.type === "dm") {
     message.channel.send(new Discord.RichEmbed()
@@ -44,7 +43,7 @@ client.on('message', async message => {
     .setFooter(footer)
   )}
   else if (message.content.startsWith("r!")) {
-    if (guild.member(USER_ID)) {
+    if (client.guilds.get('572499797991227403').member('551922470823657502')) {
       message.channel.send(new Discord.RichEmbed()
                             .setColor('#29752f')
                             .addField('**This server does not use `r!` for it\'s RoboTop prefix!**','**Please use `0` instead!**')
@@ -59,7 +58,7 @@ message.channel.send(new Discord.RichEmbed()
                       .setFooter(footer)
   )}
   else if (message.content.startsWith("?")) {
-    if (guild.member(USER_ID)) {
+    if (user) {
       message.channel.send(new Discord.RichEmbed()
                         .setColor('#29752f')
                         .addField('**This server does not have Dyno!**','**Please use RoboTop or Rythm!**')
@@ -73,7 +72,7 @@ message.channel.send(new Discord.RichEmbed()
                       .setFooter(footer)
   )}
   else if (message.content.startsWith("=")) {
-  if (guild.member(USER_ID)) {
+  if (user) {
     message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
                       .addField('**This server does not have Ayana!**','**Please use Rythm instead!**')
@@ -87,7 +86,7 @@ message.channel.send(new Discord.RichEmbed()
                       .setFooter(footer)
   )}
   else if (message.content.startsWith("<@588772311931420672>")) {
-    if (guild.member(USER_ID)) {
+    if (user) {
       message.channel.send(new Discord.RichEmbed()
                         .setColor('#29752f')
                         .addField('**Harro! I\'m a special helper for this server, the Sunforest Ally!**','**If you\'d to know more, DM <@381862688298631168> or use `s!help` for a list of commands.**')
@@ -110,7 +109,7 @@ message.channel.send(new Discord.RichEmbed()
     else if (message.content.startsWith("s!")) {
 
     if (message.content === 's!help') {
-      if (guild.member(USER_ID)) {
+      if (user) {
         message.channel.send(new Discord.RichEmbed()
         .setColor('#29752f')
         .addField('**s!help**','**Opens help/commands menu**')
@@ -126,7 +125,7 @@ message.channel.send(new Discord.RichEmbed()
    .setFooter(footer)
   )}
   else if (message.content === 's!ping') {
-    if (guild.member(USER_ID)) {
+    if (user) {
       message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
     .addField('**Pong!**','**' + new Date().getTime() - message.createdTimestamp + " ms**")
@@ -143,7 +142,7 @@ message.channel.send(new Discord.RichEmbed()
         message.channel.send(text)
       } else message.channel.send('**' + text + '**')
   }  else if (message.content === 's!pong') {
-      if (guild.member(USER_ID)) {
+      if (user) {
         message.channel.send(new Discord.RichEmbed()
       .setColor('#29752f')
       .addField('**Uhh... ping!**',"**" + new Date().getTime() - message.createdTimestamp + " ms**")
@@ -155,7 +154,7 @@ message.channel.send(new Discord.RichEmbed()
       .addField('Uhh... ping!','404 ms')
       .setTimestamp()
       .setFooter(footer)
-    )} else if (guild.member(USER_ID)) {
+    )} else if (user) {
       message.channel.send(new Discord.RichEmbed()
       .setColor('#29752f')
       .addField('**Sorry, I don\'t recognize that command!**','**Type `s!help` for a list of commands.**')
