@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.11.2'
+var version = '0.11.3'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -102,7 +102,7 @@ message.channel.send(new Discord.RichEmbed()
   )} else if (message.content === 's!credits') {
       message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
-    .addField('Credits:', '΃')
+    .addField('Credits:', '_ _')
     .addBlankField()
     .addField('SummerSunflower','For creating the server :yellow_heart:')
     .addField('JBMagination','For creating me :green_heart:')
@@ -110,21 +110,20 @@ message.channel.send(new Discord.RichEmbed()
     .addField('Mii26','For testing the bot :blue_heart:')
     .addField('Ari','For testing the bot :black_heart:')
     .addField('Choose2Smile','For being alive and indirectly helping with quotes :purple_heart:')
-    .addBlankField()
     .addField('You','For reading this and being a part of Summer\'s server. :heart:')
     .setTimestamp()
     .setFooter("we really do love you <3 s!help | " + version)
   )} else if (message.content === 's!ocials') {
      message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
-    .addField('Summer\'s Socials:', '΃')
+    .addField('Summer\'s Socials:', '_ _')
     .addField('Instagram','https://instagram.com/princesssummersunflower')
     .addField('Instagram','https://www.instagram.com/summersunflowerphotography/')
     .addField('Twitch','https://www.twitch.tv/princessnatsumihimawari')
     .addField('YouTube','https://www.youtube.com/channel/UCqJNDZysOBBHYjtvDQK-Aog')
     .addField('Twitter','https://twitter.com/SummerSun501')
     .addBlankField()
-    .addField('JBM\'s Socials:', '΃')
+    .addField('JBM\'s Socials:', '_ _')
     .addField('YouTube','https://bit.ly/Sub2JBM')
     .addField('Twitch','https://twitch.tv/jbmagination')
     .addField('Twitter','https://twitter.com/jbmagination')
