@@ -17,6 +17,7 @@ client.on('ready', () => {
     `you click to read this extended status message`,
     `\${status_message}`,
     `Steven Universe`,
+    `Shane Dawson's videos`,
     `and pleading for you to boost the server`,
     ` `
   ];
