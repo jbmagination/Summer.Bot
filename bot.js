@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.11.3'
+var version = '0.11.4'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -103,7 +103,6 @@ message.channel.send(new Discord.RichEmbed()
       message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
     .addField('Credits:', '_ _')
-    .addBlankField()
     .addField('SummerSunflower','For creating the server :yellow_heart:')
     .addField('JBMagination','For creating me :green_heart:')
     .addField('Uncloudless','For creating Summer and I\'s avatar :sparkling_heart:')
