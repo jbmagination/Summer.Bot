@@ -18,7 +18,7 @@ message.channel.send(new Discord.RichEmbed()
   else if (message.content.startsWith("?")) {
     message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
-                      .addField('This server does not have Dyno!','Please use RoboTop or Rythm!')
+                      .addField('This server does not have Dyno!','Please use RoboTop. Mee 6, or Rythm!')
                       .setTimestamp()
                       .setFooter(footer)
   )}
