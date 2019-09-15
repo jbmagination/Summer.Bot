@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.11.5'
+var version = '0.12'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -19,7 +19,10 @@ client.on('ready', () => {
     `Steven Universe`,
     `Shane Dawson's videos`,
     `and pleading for you to boost the server`,
-    ` `
+    ` `,
+    `anime`,
+    `the Nintendo Direct`,
+    `the other bots plead to be at my glory`,
   ];
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity(`you find the elusive launch message. Congratulations!`, { type: 'WATCHING', status: 'online' });
