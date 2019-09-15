@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.9'
+var version = '0.9.1'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -79,7 +79,7 @@ message.channel.send(new Discord.RichEmbed()
                         .addField('s!ping','Tests to see if bot is working')
                         .addField('s!pong','Uhh... **PRETEND YOU NEVER SAW THIS**')
                         .addField('s!quote','Says a random quote related to the server or people in it')
-                        .addField('s!credits',
+                        .addField('s!credits','See the people who made it all happen :red_heart:')
                         .setTimestamp()
    .setFooter(footer)
   )}
