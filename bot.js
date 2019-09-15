@@ -56,7 +56,7 @@ message.channel.send(new Discord.RichEmbed()
                       .setTimestamp()
                       .setFooter(version)
  )}
-  else if (message.content === 's!harro')) {
+  else if (message.content === 's!harro') {
     message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
                       .addField('Harro! I\'m a special helper for this server, the Sunforest Ally!','If you\'d to know more, DM <@381862688298631168> or use `s!help` for a list of commands.')
