@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.8'
+var version = '0.9'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -63,7 +63,7 @@ message.channel.send(new Discord.RichEmbed()
                       .setTimestamp()
                       .setFooter(version)
  )}
-  else if (message.content === 't!quote') {
+  else if (message.content === 's!quote') {
     let quote = [
       `"When did we get so many children?!" -Summer`,
       `"Ketchup is a fruit!" -Lala"`,
@@ -78,6 +78,8 @@ message.channel.send(new Discord.RichEmbed()
                         .addField('s!help','Opens help/commands menu')
                         .addField('s!ping','Tests to see if bot is working')
                         .addField('s!pong','Uhh... **PRETEND YOU NEVER SAW THIS**')
+                        .addField('s!quote','Says a random quote related to the server or people in it')
+                        .addField('s!credits',
                         .setTimestamp()
    .setFooter(footer)
   )}
@@ -90,9 +92,22 @@ message.channel.send(new Discord.RichEmbed()
   )} else if (message.content === 's!pong') {
       message.channel.send(new Discord.RichEmbed()
     .setColor('#29752f')
-    .addField('Uhh... pang!',new Date().getTime() - message.createdTimestamp + " ms")
+    .addField('Ping!',"-" + new Date().getTime() - message.createdTimestamp + " ms")
     .setTimestamp()
-    .setFooter(footer)
+    .setFooter('wait why is the ping negati-- s!help | ' + version)
+  )} else if (message.content === 's!credits') {
+      message.channel.send(new Discord.RichEmbed()
+    .setColor('#29752f')
+    .addField('Credits:')
+    .addBlankField()
+    .addField('SummerSunflower','For creating the server :yellow_heart:')
+    .addField('JBMagination','For creating me :green_heart:')
+    .addField('Uncloudless','For creating Summer and I\'s avatar :purple_heart:')
+    .addField('Mii26','For testing the bot :purple_heart:')
+    .addField('Ari','For testing the bot :black_heart:')
+    .addField('You','For reading this and being a part of Summer\'s server. :red_heart:')
+    .setTimestamp()
+    .setFooter("we really do love you :red_heart::red_heart::red_heart: s!help | " + version)
   )} else message.channel.send(new Discord.RichEmbed()
                 .setColor('#29752f')
                 .addField('Sorry, I don\'t recognize that command!','Type `s!help` for a list of commands.')
