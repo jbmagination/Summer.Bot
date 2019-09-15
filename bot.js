@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.10.3'
+var version = '0.11'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -16,6 +16,8 @@ client.on('ready', () => {
     `@JBMagination#5512 code me`,
     `you click to read this extended status message`,
     `\${status_message}`,
+    `Steven Universe`,
+    `and pleading for you to boost the server`,
     ` `
   ];
   console.log(`Logged in as ${client.user.tag}!`);
