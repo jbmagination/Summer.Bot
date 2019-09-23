@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.12'
+var version = '0.12.1'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
@@ -111,7 +111,7 @@ message.channel.send(new Discord.RichEmbed()
     .addField('JBMagination','For creating me :green_heart:')
     .addField('Uncloudless','For creating Summer and I\'s avatar :sparkling_heart:')
     .addField('Mii26','For testing the bot :blue_heart:')
-    .addField('Ari','For testing the bot :black_heart:')
+    .addField('Lavender','For testing the bot :black_heart:')
     .addField('Choose2Smile','For being alive and indirectly helping with quotes :purple_heart:')
     .addField('You','For reading this and being a part of Summer\'s server. :heart:')
     .setTimestamp()
