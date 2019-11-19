@@ -1,28 +1,31 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var version = '0.12.1'
+var version = '0.12.2'
 var catchphrase = 'Harro! s!help'
 var footer = version + ' | ' + catchphrase
 client.on('ready', () => {
   let statuses = [
-    `https://www.twitch.tv/princessnatsumihimawari`,
-    `https://www.twitch.tv/jbmagination`,
-    `a small ${client.users.size} users!`,
-    `just ${client.guilds.size} server!`,
-    `you type in this server`,
-    `a sunflower`,
-    `you read these status messages`,
-    `Discord`,
-    `@JBMagination#5512 code me`,
-    `you click to read this extended status message`,
-    `\${status_message}`,
-    `Steven Universe`,
-    `Shane Dawson's videos`,
-    `and pleading for you to boost the server`,
+    `https://www.twitch.tv/summersunstarflower | s!help`,
+    `https://www.twitch.tv/jbmagination | s!help`,
+    `a small ${client.users.size} users! | s!help`,
+    `just ${client.guilds.size} server! | s!help`,
+    `you type in this server | s!help`,
+    `a sunflower | s!help`,
+    `you read these status messages | s!help`,
+    `Discord | s!help`,
+    `@JBMagination#5512 code me | s!help`,
+    `you click to read this extended status message | s!help`,
+    `\${status_message} | s!help`,
+    `Steven Universe | s!help`,
+    `Shane Dawson's videos | s!help`,
+    `and pleading for you to boost the server | s!help`,
     ` `,
-    `anime`,
-    `the Nintendo Direct`,
-    `the other bots plead to be at my glory`,
+    ` | s!help `,
+    `anime | s!help`,
+    `the Nintendo Direct | s!help`,
+    `the other bots plead to be at my glory | s!help`,
+    `COPPA kill YouTube | s!help`,
+    `Waiting for 1577836800 | s!help`,
   ];
   console.log(`Logged in as ${client.user.tag}!`);
   client.user.setActivity(`you find the elusive launch message. Congratulations!`, { type: 'WATCHING', status: 'online' });
@@ -38,13 +41,6 @@ client.on('message', message => {
 message.channel.send(new Discord.RichEmbed()
                       .setColor('#29752f')
                       .addField('This server does not use `r!` for it\'s RoboTop prefix!','Please use `0` instead!')
-                      .setTimestamp()
-                      .setFooter(footer)
-  )}
-  else if (message.content.startsWith("?")) {
-    message.channel.send(new Discord.RichEmbed()
-                      .setColor('#29752f')
-                      .addField('This server does not have Dyno!','Please use RoboTop. Mee 6, or Rythm!')
                       .setTimestamp()
                       .setFooter(footer)
   )}
@@ -72,11 +68,20 @@ message.channel.send(new Discord.RichEmbed()
   else if (message.content === 's!quote') {
     let quote = [
       `"When did we get so many children?!" -Summer`,
-      `"Ketchup is a fruit!" -Lala"`,
-      `"Ketchup is a smoothie!" -Lala`
+      `"**bRUh mOMent**" -Rocky`,
+      `"i may be getting smarter or something" -Rocky`,
+      `"i probably have a phone number right unless i dont" -Rocky`,
+      `"its a FREAKIN RESTROOM" -Rocky`,
+      `"how did i even get here" -Rocky`,
+      `"i just attempted to make grilled cheese" -Rocky`,
+      `"my dog is into soap opera" -Rocky`,
   ];
     let quotes = quote[Math.floor(Math.random() * quote.length)];
-    message.channel.send(quotes);
+   // message.channel.send(quotes);
+    message.channel.send(new Discord.RichEmbed()
+                        .setColor('#29752f')
+                        .addField('Quote',quotes)
+                        .setTimestamp()
 } else if (message.content.startsWith("s!")) {
     if (message.content === 's!help') {
             message.channel.send(new Discord.RichEmbed()
@@ -88,6 +93,7 @@ message.channel.send(new Discord.RichEmbed()
                         .addField('s!quote','Says a random quote related to the server or people in it')
                         .addField('s!ocials','See what I did there? See Summer and JBM\'s socials!')
                         .addField('s!credits','See the people who made it all happen :heart:')
+                        .addField('test','
                         .setTimestamp()
    .setFooter(footer)
   )}
