@@ -74,7 +74,7 @@ message.channel.send(new Discord.RichEmbed()
       `"its a FREAKIN RESTROOM" -Rocky`,
       `"how did i even get here" -Rocky`,
       `"i just attempted to make grilled cheese" -Rocky`,
-      `"my dog is into soap opera" -Rocky`,
+      `"my dog is into soap opera" -Rocky`
   ];
     let quotes = quote[Math.floor(Math.random() * quote.length)];
    // message.channel.send(quotes);
