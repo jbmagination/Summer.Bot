@@ -93,7 +93,6 @@ message.channel.send(new Discord.RichEmbed()
                         .addField('s!quote','Says a random quote related to the server or people in it')
                         .addField('s!ocials','See what I did there? See Summer and JBM\'s socials!')
                         .addField('s!credits','See the people who made it all happen :heart:')
-                        .addField('test','
                         .setTimestamp()
    .setFooter(footer)
   )}
